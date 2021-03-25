@@ -1,0 +1,24 @@
+{
+  "focus": [
+    {
+      "key": "jjag3",
+      "crsid": "jjag3",
+      "name": "JJ Gray",
+      "subject": "Computer Science"
+    }
+  ],
+  "parents": [
+    {
+      "key": "ab123",
+      "crsid": "ab123",
+      "name": "Alice",
+      "subject": "Physics"
+    },
+    {
+      "key": "bc456",
+      "crsid": "bc456",
+      "name": "Bob",
+      "subject": "Maths"
+    }
+  ]
+}

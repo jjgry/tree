@@ -1,26 +1,35 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import PersonGroup from "./components/PersonGroup";
+import Container from "react-bootstrap/Container";
+import { Response } from "./interfaces";
+import "./App.css";
 
-function App() {
+const App: React.FC = () => {
+  const [data, setData] = useState<Response>({});
+
+  const getData = () => {
+    fetch("./test-data.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => setData(json));
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="mt-3">
+      <h3>Focus</h3>
+      {data.focus ? <PersonGroup people={data.focus} /> : <p>loading</p>}
+      <h3>Parents</h3>
+      {data.parents ? <PersonGroup people={data.parents} /> : <p>loading</p>}
+    </Container>
   );
-}
+};
 
 export default App;
