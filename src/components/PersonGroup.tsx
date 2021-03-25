@@ -1,15 +1,33 @@
-import React from "react";
-import CardDeck from "react-bootstrap/CardDeck";
+import Card from "react-bootstrap/Card";
+import ListGroup from "react-bootstrap/ListGroup";
+import Badge from "react-bootstrap/Badge";
 import { Person } from "../interfaces";
-import PersonCard from "./PersonCard";
 
-const PersonGroup = ({ people }: { people: Person[] }) => {
+const PersonGroup = ({
+  title,
+  people,
+}: {
+  title: string;
+  people: Person[];
+}) => {
   return (
-    <CardDeck>
-      {people.map((person: Person) => {
-        return <PersonCard {...person} />;
-      })}
-    </CardDeck>
+    <Card>
+      <Card.Header as="h6">{title}</Card.Header>
+      <ListGroup variant="flush">
+        {people.map((person: Person) => {
+          return (
+            <ListGroup.Item key={person.key}>
+              {person.name}{" "}
+              <Badge variant="light">
+                <code>{person.crsid}</code>
+              </Badge>{" "}
+              <Badge variant="primary">{person.college}</Badge>{" "}
+              <Badge variant="success">{person.subject}</Badge>
+            </ListGroup.Item>
+          );
+        })}
+      </ListGroup>
+    </Card>
   );
 };
 

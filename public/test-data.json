@@ -1,24 +1,74 @@
 {
-  "focus": [
-    {
-      "key": "jjag3",
-      "crsid": "jjag3",
-      "name": "JJ Gray",
-      "subject": "Computer Science"
-    }
-  ],
+  "focus": {
+    "key": "jjag3",
+    "focus": true,
+    "crsid": "jjag3",
+    "name": "JJ Gray",
+    "college": "Peterhouse",
+    "subject": "Computer Science"
+  },
   "parents": [
     {
       "key": "ab123",
+      "focus": false,
       "crsid": "ab123",
       "name": "Alice",
+      "college": "Peterhouse",
       "subject": "Physics"
     },
     {
       "key": "bc456",
+      "focus": false,
       "crsid": "bc456",
       "name": "Bob",
+      "college": "Trinity",
       "subject": "Maths"
+    }
+  ],
+  "children": [
+    {
+      "key": "cd789",
+      "focus": false,
+      "crsid": "cd789",
+      "name": "Charlie",
+      "college": "Pembroke",
+      "subject": "HSPS"
+    },
+    {
+      "key": "de567",
+      "focus": false,
+      "crsid": "de567",
+      "name": "Danielle",
+      "college": "Sidney Sussex",
+      "subject": "English"
+    }
+  ],
+  "partners": [
+    {
+      "key": "lws42",
+      "focus": false,
+      "crsid": "lws42",
+      "name": "Levi",
+      "college": "Peterhouse",
+      "subject": "History"
+    }
+  ],
+  "siblings": [
+    {
+      "key": "cls23",
+      "focus": false,
+      "crsid": "cls23",
+      "name": "Clarence",
+      "college": "Peterhouse",
+      "subject": "Computer Science"
+    },
+    {
+      "key": "cls232",
+      "focus": false,
+      "crsid": "cls23",
+      "name": "Clarence",
+      "college": "Peterhouse",
+      "subject": "Computer Science"
     }
   ]
 }
