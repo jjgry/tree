@@ -1,8 +1,0 @@
-#!/bin/bash -e
-USER="$(whoami)"
-[ -e "/home/jjag3/tree/web.sock" ] && rm "/home/jjag3/tree/web.sock"
-umask 0
-
-. ~/.nvm/nvm.sh
-NODE_ENV=production PORT="/home/jjag3/tree/web.sock" \
-    exec ~/tree/server.js

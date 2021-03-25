@@ -1,1 +1,0 @@
-RewriteRule "^(.*)$" http://localhost:1234/$1 [P,NE,L,QSA]
