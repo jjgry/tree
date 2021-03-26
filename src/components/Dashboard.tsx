@@ -4,7 +4,7 @@ import SearchBar from "./SearchBar";
 import HeaderImage from "./HeaderImage";
 import Container from "react-bootstrap/Container";
 import CardColumns from "react-bootstrap/CardColumns";
-import { Response } from "../interfaces";
+import { Response } from "../utils/interfaces";
 import { useParams } from "react-router-dom";
 
 const Dashboard = () => {

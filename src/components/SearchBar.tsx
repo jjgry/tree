@@ -4,6 +4,7 @@ import FormControl from "react-bootstrap/FormControl";
 import InputGroup from "react-bootstrap/InputGroup";
 import Button from "react-bootstrap/Button";
 import { useHistory } from "react-router-dom";
+import { personUrlPath } from "../utils/constants";
 
 const SearchBar = () => {
   const history = useHistory();
@@ -12,7 +13,7 @@ const SearchBar = () => {
   const handleSubmit = (event: React.ChangeEvent<any>) => {
     event.preventDefault();
     setValue("");
-    const targetUrl = "/u/" + value;
+    const targetUrl = personUrlPath + value;
     history.push(targetUrl);
   };
 
