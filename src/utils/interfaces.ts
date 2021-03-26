@@ -10,6 +10,6 @@ export type Response = {
     focus?: Person;
     parents?: Person[];
     children?: Person[];
-    partners?: Person[];
+    spouses?: Person[];
     siblings?: Person[];
 }

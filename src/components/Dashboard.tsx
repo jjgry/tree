@@ -39,7 +39,7 @@ const Dashboard = () => {
 
       {data.focus &&
       data.parents &&
-      data.partners &&
+      data.spouses &&
       data.siblings &&
       data.children ? (
         <>
@@ -56,7 +56,7 @@ const Dashboard = () => {
 
           <CardColumns>
             <PersonGroup title="Parents" people={data.parents} />
-            <PersonGroup title="Partner" people={data.partners} />
+            <PersonGroup title="Partner" people={data.spouses} />
             <PersonGroup title="Siblings" people={data.siblings} />
             <PersonGroup title="Children" people={data.children} />
           </CardColumns>
