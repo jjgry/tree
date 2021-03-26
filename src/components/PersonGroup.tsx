@@ -15,8 +15,9 @@ const PersonGroup = ({
       <Card.Header as="h6">{title}</Card.Header>
       <ListGroup variant="flush">
         {people.map((person: Person) => {
+          const url = "/u/" + person.crsid;
           return (
-            <ListGroup.Item key={person.key}>
+            <ListGroup.Item key={person.key} action href={url}>
               {person.name}{" "}
               <Badge variant="light">
                 <code>{person.crsid}</code>

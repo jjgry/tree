@@ -1,12 +1,8 @@
 import SearchBar from "./SearchBar";
 import Container from "react-bootstrap/Container";
 import HeaderImage from "./HeaderImage";
-import { useParams } from "react-router";
 
 const NotFound = () => {
-  // let { id }: { id: string } = useParams();
-  // console.log("ID:", id);
-
   return (
     <Container className="mt-3 justify-content-md-center">
       <HeaderImage />

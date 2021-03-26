@@ -5,7 +5,7 @@ import HeaderImage from "./HeaderImage";
 import Container from "react-bootstrap/Container";
 import CardColumns from "react-bootstrap/CardColumns";
 import { Response } from "../interfaces";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 const Dashboard = () => {
   let { id }: { id: string } = useParams();
