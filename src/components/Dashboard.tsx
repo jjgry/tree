@@ -26,8 +26,22 @@ const Dashboard = () => {
       });
   };
 
+  const getApiData = () => {
+    fetch("/api/v1/parents", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => {
+        console.log("Data fetched from API: ", json);
+      });
+  };
+
   useEffect(() => {
     getData();
+    getApiData();
   }, []);
 
   console.log("data:", data);
